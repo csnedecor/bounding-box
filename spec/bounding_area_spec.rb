@@ -1,10 +1,13 @@
+require 'pry'
 require_relative '../lib/bounding_area'
+require_relative '../lib/bounding_box'
 
 describe BoundingArea do
   describe '#contains_point?' do
 
     it 'is always false for an empty bounding area' do
       empty_area = BoundingArea.new([])
+      
       expect(empty_area.contains_point?(0.0, 0.0)).to eq(false)
     end
 
